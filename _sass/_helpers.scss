@@ -1,0 +1,78 @@
+/**************/
+/* LISTS */
+/**************/
+
+.list--unstyled {
+  list-style: none;
+}
+
+.list--inline > li {
+  display: inline-block;
+  padding: 0 .5em;
+}
+
+/**************/
+/* Float */
+/**************/
+.clearfix {
+  @extend %clearfix;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+
+/**************/
+/* Images */
+/**************/
+.img-rounded {
+  border-radius: .5em;
+}
+.img-block {
+  @extend %full-width-image;
+}
+
+/**************/
+/* Blocks */
+/**************/
+.inline--middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+.no--margin {
+  margin: 0;
+}
+.no--padding {
+  padding: 0;
+}
+
+/**************/
+/* Colored Texts */
+/**************/
+.text--blue {
+  color: $blue;
+}
+
+/**************/
+/* Aligned Texts */
+/**************/
+.text--center {
+  text-align: center;
+}
+.text--left {
+  text-align: left;
+}
+.text--right {
+  text-align: right;
+}
+.text--justify {
+  text-align: justify;
+}
+.text--ltr {
+  direction: ltr;
+}
+.text--rtl {
+  direction: rtl;
+}

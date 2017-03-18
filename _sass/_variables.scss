@@ -13,15 +13,24 @@ $darkGray: #333;
 $gray: #666;
 $lightGray: #eee;
 $white: #fff;
+$border-color: #ddd;
 
 // Font stacks
+$font-primary: vazir, Helvetica, Arial, sans-serif;
 $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Mobile breakpoints
-@mixin mobile {
-  @media screen and (max-width: 640px) {
-    @content;
-  }
-}
+// breakpoints
+$b-mobile: 30em;
+$b-tablet: 45em;
+
+// Container
+$container-max-width: $b-tablet;
+
+// Header
+$header-height: 5em;
+$brand-size: $header-height;
+
+// Post
+$post-figure-size: 15%;

@@ -1,0 +1,29 @@
+.site__footer {
+
+  padding: 1em 0;
+  position: relative;
+  border-top: 1px solid $border-color;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    a {
+      color: $black;
+    }
+  }
+
+  &__brand {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3em;
+    height: 3em;
+    background-color: $lightGray;
+    border-radius: 50%;
+    padding: .5em;
+    cursor: pointer;
+    border: 1px solid $border-color;
+  }
+
+}

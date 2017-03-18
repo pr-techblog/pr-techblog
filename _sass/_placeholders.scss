@@ -1,0 +1,20 @@
+%clearfix {
+  &:after, &:before {
+    display: table;
+    content: ' ';
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+%full-width-image {
+  display: block;
+  width: 100%;
+}
+
+%reset-hr {
+  background: transparent;
+  border: 0 none;
+  height: 1px;
+}

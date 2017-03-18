@@ -1,0 +1,45 @@
+/**************/
+/* LAYOUT */
+/**************/
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: $container-max-width;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.site__container {
+  position: relative;
+  min-height: 100%;
+  padding-top: 2em;
+  padding-bottom: 3em;
+}
+
+.site__header {
+  text-align: center;
+}
+
+.site__header__divider {
+  @extend %reset-hr;
+  @include symmetrical-linear-gradient(rgba($white,0), $border-color);
+  display: block;
+  width: 100%;
+  margin: 2.5em auto;
+}
+
+.site__footer {
+  background-color: $lightGray;
+}

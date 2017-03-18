@@ -1,0 +1,56 @@
+@font-face {
+  font-family: 'pricons';
+  src:  url('/assets/fonts/pricons.eot?29tzr7');
+  src:  url('/assets/fonts/pricons.eot?29tzr7#iefix') format('embedded-opentype'),
+    url('/assets/fonts/pricons.ttf?29tzr7') format('truetype'),
+    url('/assets/fonts/pricons.woff?29tzr7') format('woff'),
+    url('/assets/fonts/pricons.svg?29tzr7#pricons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="pricon-"], [class*=" pricon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pricons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pricon-github:before {
+  content: "\e900";
+}
+.pricon-heart:before {
+  content: "\e901";
+}
+.pricon-reply:before {
+  content: "\e902";
+}
+.pricon-retweet:before {
+  content: "\e903";
+}
+.pricon-star:before {
+  content: "\e9d9";
+}
+.pricon-arrow-right:before {
+  content: "\ea3c";
+}
+.pricon-arrow-left:before {
+  content: "\ea40";
+}
+.pricon-twitter:before {
+  content: "\ea96";
+}
+
+// Icon
+.icon {
+  @extend .inline--middle;
+  margin-left: .5em;
+}

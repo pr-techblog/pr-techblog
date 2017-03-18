@@ -1,0 +1,28 @@
+.site__header {
+    @extend %clearfix;
+    &__brand {
+        width: $brand-size;
+        height: $brand-size;
+        margin: 0 auto 1em;
+        background-color: $lightGray;
+        border: 1px solid $border-color;
+        padding: .5em;
+        border-radius: 50%;
+        img {
+            @extend %full-width-image;
+        }
+    }
+}
+
+.header__list {
+    padding: 0;
+    margin: 0;
+    a {
+        color: $gray;
+        transition: 150ms linear;
+        &:hover,
+        &:focus {
+            color: $black;
+        }
+    }
+}

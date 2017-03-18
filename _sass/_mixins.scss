@@ -1,0 +1,23 @@
+@mixin mobile() {
+  @media screen and (max-width: $b-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media screen and (max-width: $b-tablet) {
+    @content;
+  }
+}
+
+@mixin symmetrical-linear-gradient($start-stop-color, $middle-color) {
+  background: linear-gradient(to right, $start-stop-color, $middle-color, $start-stop-color);
+}
+
+@mixin absolute($top: 0, $left: 0, $width: 100%, $height: 100%) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
+}

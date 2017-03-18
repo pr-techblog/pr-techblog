@@ -1,0 +1,12 @@
+.lazyimage {
+  @extend .img-rounded;
+  display: inline-block;
+  background-color: $lightGray;
+  background-image: url(/images/pr.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-error {
+  opacity: 0;
+}

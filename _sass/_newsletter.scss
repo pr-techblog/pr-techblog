@@ -1,0 +1,50 @@
+.newsletter__container {
+    margin: 1.5em auto 5em;
+    border: 1px solid $blue;
+    border-radius: .5em;
+    padding: 0 1em 1em;
+}
+
+.newsletter__form {
+    display: flex;
+    width: 75%;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    margin: 0 auto;
+    input[type=email] {
+        border: 1px solid $border-color;
+        height: 2.325em;
+        padding: .5em 1em;
+        width: 100%;
+        display: block;
+        border-radius: .25em;
+        transition: border 150ms linear;
+        flex: 1 1 auto;
+        text-align: left;
+        direction: ltr;
+        &:focus {
+            outline: 0 none;
+            border: 1px solid $blue;
+        }
+    }
+    .button {
+        display: inline-block;
+        border: 1px solid $blue;
+        background-color: $blue;
+        color: $white;
+        white-space: nowrap;
+        text-align: center;
+        border-radius: .325em;
+        height: 2.325em;
+        cursor: pointer;
+        font-family: inherit;
+        padding: .5em .75em;
+        /* width: 10em; */
+        margin-right: 1em;
+        flex: 0 0 auto;
+        &:focus {
+            outline: 0 none;
+        }
+    }
+}
