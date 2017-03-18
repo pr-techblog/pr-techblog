@@ -1,0 +1,87 @@
+.author {
+  padding: .5em;
+  transition: 150ms linear;
+  cursor: pointer;
+
+  @include tablet() {
+    margin-bottom: 1em;
+  }
+
+  @include mobile() {
+    padding: 0;
+  }
+
+  &:hover {
+    background-color: lighten($lightGray, 3%);
+  }
+}
+
+.author__figure {
+  margin: 0;
+  img {
+    border: .3125em solid lighten($border-color, 5%);
+  }
+}
+
+.author__name {
+  margin-top: 0;
+  display: block;
+}
+
+.author__socials {
+
+  > li {
+    padding: {
+      right: 0;
+      left: 0;
+    }
+  }
+
+  @include mobile() {
+    & > li {
+      padding: {
+        right: .1em;
+        left: .1em;
+      }
+    }
+  }
+
+  a {
+    @extend %circle;
+    @extend %center-block;
+    background-color: $lightGray;
+    border: 1px solid $border-color;
+    color: $black;
+    text-align: center;
+    display: block;
+    width: 1.825em;
+    height: 1.825em;
+    line-height: 2em;
+    font-size: 1.1em;
+    transition: 150ms linear;
+    &:hover, &:focus {
+      background-color: $blue;
+      color: $white;
+      border-color: $blue;
+    }
+  }
+  .icon {
+    width: 1.25em;
+    height: 1.25em;
+  }
+}
+
+// Author Single
+.author--single {
+  .lazyimage {
+    height: 10em;
+  }
+  &__figure {
+    max-width: 10em;
+    max-height: 10em;
+    border: 1px solid $border-color;
+  }
+  &__bio {
+    margin-top: 1.5em;
+  }
+}

@@ -1,18 +1,27 @@
-# ---
-# authors:
-#   - fa_name: فرزاد یوسف زاده
-#   en_name: Farzad YZ
-#   github: https://github.com/farskid
-#   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz,
-#   avatar: /assets/images/farzad.jpeg
-# - fa_name: امیر مومنیان
-#   en_name: Amir Momenian
-#   github: https://github.com/nainemom
-#   stackoverflow: "",
-#   avatar: /assets/images/amir.png
-# - fa_name: نیما هاشمی
-#   en_name: Nima Hashemi
-#   github: https://github.com/niima
-#   stackoverflow: "",
-#   avatar: /assets/images/nima.jpeg
-# ---
+farzad:
+  fa_name: فرزاد یوسف زاده
+  en_name: Farzad YZ
+  unique_id: farzad
+  github: https://github.com/farskid
+  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
+  avatar: /assets/images/farzad.jpeg
+  twitter: https://twitter.com/Farzad_YZ
+  website: https://farzadyz.com
+nima:
+  fa_name: نیما هاشمی
+  en_name: Nima Hashemi
+  unique_id: nima
+  github: https://github.com/niima
+  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz,
+  avatar: /assets/images/nima.jpeg
+  twitter: https://twitter.com/_whoamiii
+  website: https://niima.github.io
+amir:
+  fa_name: امیر مومنیان
+  en_name: Amir Momenian
+  unique_id: amir
+  github: https://github.com/nainemom
+  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz,
+  avatar: /assets/images/amir.png
+  twitter: https://twitter.com/nainemom
+  website: https://morde.ir
