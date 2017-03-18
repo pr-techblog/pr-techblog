@@ -5,12 +5,18 @@ layout: default
 <article class="post">
   <h1>{{ page.title }}</h1>
 
-  <div class="entry">
-    {{ content }}
+  <div class="post__info">
+    <span>
+      <span class="lazyimage">
+        <img onError="window.pr.methods.addClass('img-error', this)" src="{{ page.author_avatar }}" alt="{{ page.author }}" class="img-rounded post__info__figure inline--middle">
+      </span>
+      <span class="inline--middle post__author">{{ page.author }}</span>
+    </span>
+    <small><em>{{ page.date | jdate: "%d %b %Y" }}</em></small>
   </div>
 
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+  <div class="post__entry post__entry--single">
+    {{ content }}
   </div>
 
   {% include disqus.html %}

@@ -4,15 +4,24 @@ layout: default
 
 <div class="posts">
   {% for post in site.posts %}
-    <article class="post">
+  <article class="post">
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+    <div onClick="window.pr.methods.loadURL('{{ site.url }}{{ post.url }}')" class="post__container">
+      <figure class="post__figure">
+        {% if post.author_avatar %}
+        <span class="lazyimage">
+          <img onError="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ post.author_avatar }}">
+        </span>
+        {% endif %}
+        <small class="post__date"><em>{{ post.date | jdate: "%d %b %Y" }}</em></small>
+      </figure>
 
-      <div class="entry">
-        {{ post.excerpt }}
-      </div>
+      <section class="post__entry">
+        <h3 class="post__title">{{ post.title }}</h3>
+        <div>{{ post.excerpt }}</div>
+      </section>
+    </div>
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
+  </article>
   {% endfor %}
 </div>
