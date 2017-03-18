@@ -1,0 +1,30 @@
+.button {
+  display: inline-block;
+  border: 1px solid $blue;
+  background-color: $blue;
+  color: $white;
+  white-space: nowrap;
+  text-align: center;
+  border-radius: .325em;
+  height: 2.325em;
+  cursor: pointer;
+  font-family: inherit;
+  padding: .5em .75em;
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:active,
+  &:focus:active {
+    color: $white;
+    background-color: $blue;
+  }
+}
+
+.button--with-icon {
+  height: 1.5em;
+  min-width: 3em;
+  padding: .125em .3125em;
+  line-height: 1.125em;
+  font-size: .8125em;
+  width: 4.375em;
+}

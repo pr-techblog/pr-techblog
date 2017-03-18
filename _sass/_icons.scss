@@ -48,9 +48,17 @@
 .pricon-twitter:before {
   content: "\ea96";
 }
+.pricon-stackoverflow:before {
+  content: "\ead0";
+}
+.pricon-earth:before {
+  content: "\e9ca";
+}
+.pricon-telegram:before {
+  content: "\ea95";
+}
 
 // Icon
 .icon {
   @extend .inline--middle;
-  margin-left: .5em;
 }

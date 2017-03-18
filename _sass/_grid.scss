@@ -1,0 +1,35 @@
+.row {
+  @extend %clearfix;
+  margin: 0 -1em;
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    float: right;
+    min-height: 1px;
+    padding: {
+      right: 1em;
+      left: 1em;
+    }
+    position: relative;
+    width: ($i * 100 / 12) * 1%;
+  }
+  .col-#{$i}--tablet {
+    @include tablet() {
+      padding: {
+        right: .25em;
+        left: .25em;
+      }
+      width: ($i * 100 / 12) * 1%;
+    }
+  }
+  .col-#{$i}--mobile {
+    @include mobile() {
+      padding: {
+        right: .25em;
+        left: .25em;
+      }
+      width: ($i * 100 / 12) * 1%;
+    }
+  }
+}

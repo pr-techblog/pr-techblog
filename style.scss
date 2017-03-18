@@ -1,15 +1,13 @@
 ---
 ---
 
-/**************/
-/* IMPORTS */
-/**************/
-
+@import "site_banner";
 @import "reset";
 @import "variables";
 @import "placeholders";
 @import "mixins";
 @import "helpers";
+@import "grid";
 
 @import "typography";
 @import "icons";
@@ -19,9 +17,14 @@
 // Components
 @import "header";
 @import "footer";
+@import "button";
 @import "post";
+@import "page";
+@import "author";
 @import "lazyimage";
 @import "newsletter";
+@import "comments";
+@import "pointer";
 
 // Syntax highlighting @import is at the bottom of this file
 // Settled on moving the import of syntax highlighting to the bottom of the CSS

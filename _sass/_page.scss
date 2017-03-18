@@ -1,0 +1,18 @@
+.page__title {
+  margin: {
+    top: 0;
+    bottom: 0;
+  }
+
+  @include tablet() {
+    font-size: 1.5em;
+  }
+
+}
+
+.page__entry {
+  img {
+    @extend %responsive-image;
+    @extend %center-block;
+  }
+}

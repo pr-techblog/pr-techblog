@@ -13,8 +13,23 @@
   width: 100%;
 }
 
+%responsive-image {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+%center-block {
+  margin: 0 auto;
+}
+
 %reset-hr {
   background: transparent;
   border: 0 none;
   height: 1px;
+}
+
+%circle {
+  border-radius: 50%;
 }

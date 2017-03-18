@@ -12,13 +12,17 @@ html {
 
 body {
   min-height: 100%;
+  position: relative;
+  padding-bottom: $footer-height;
+  @include tablet() {
+    padding-bottom: $footer-height-mobile;
+  }
 }
 
 .container {
   margin: 0 auto;
   max-width: $container-max-width;
-  padding: 0 10px;
-  width: 100%;
+  padding: 0 1em;
 }
 
 .site__container {
@@ -32,11 +36,10 @@ body {
   text-align: center;
 }
 
-.site__header__divider {
+.site__header__divider, hr {
   @extend %reset-hr;
   @include symmetrical-linear-gradient(rgba($white,0), $border-color);
   display: block;
-  width: 100%;
   margin: 2.5em auto;
 }
 

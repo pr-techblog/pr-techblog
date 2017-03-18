@@ -8,17 +8,37 @@ layout: default
 
     <div onClick="window.pr.methods.loadURL('{{ site.url }}{{ post.url }}')" class="post__container">
       <figure class="post__figure">
-        {% if post.author_avatar %}
+
+        {% assign author = site.data.authors[post.author] %}
+
         <span class="lazyimage">
-          <img onError="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ post.author_avatar }}">
+          <img width="105" height="105" onError="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ author.avatar }}">
         </span>
-        {% endif %}
         <small class="post__date"><em>{{ post.date | jdate: "%d %b %Y" }}</em></small>
       </figure>
 
       <section class="post__entry">
         <h3 class="post__title">{{ post.title }}</h3>
-        <div>{{ post.excerpt }}</div>
+
+        <div class="post__figure--mobile">
+          <div class="post__info">
+            <span>
+              <span class="lazyimage lazyimage--mobile inline--middle">
+                <img
+                  onload="window.pr.methods.addClass('img-loaded', this.parentNode)"
+                  onerror="window.pr.methods.addClass('img-error', this)"
+                  src="{{ author.avatar }}"
+                  alt="{{ author.fa_name }}"
+                  class="img-circle post__info__figure"
+                >
+              </span>
+              <span class="inline--middle post__author">{{ author.fa_name }}</span>
+            </span>
+            <small><em>{{ post.date | jdate: "%d %b %Y" }}</em></small>
+          </div>
+        </div>
+
+        <div class="post__excerpt">{{ post.excerpt }}</div>
       </section>
     </div>
 

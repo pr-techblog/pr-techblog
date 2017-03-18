@@ -2,7 +2,9 @@
 /* BASE RULES */
 /**************/
 
-
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 
 a {
   color: $blue;
@@ -15,7 +17,10 @@ a {
 
 ul, ol {
   margin: 1em 0;
-  padding-left: 2em;
+  padding: {
+    right: 0;
+    left: 0;
+  }
 }
 
 ul {

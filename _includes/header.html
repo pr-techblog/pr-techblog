@@ -8,12 +8,14 @@
 
   <nav class="site__header__nav">
 
-    <ul class="list--unstyled list--inline header__list">
-      <li><a href="#">راهنمای انتشار مطلب</a></li>
-      <li><a href="#">خانه</a></li>
-      <li><a href="#">نویسندگان</a></li>
-      <li><a href="#">پول ریکوئست چیست</a></li>
-      <li><a href="/about">درباره ما</a></li>
+    <ul class="list--unstyled list--inline header__list text--center">
+      {% for pg in site.pages %}
+      {% if pg.showup_in_nav %}
+      <li>
+        <a {% if page.label == pg.label %} class="active" {% endif %} href="{{ pg.permalink }}">{{ pg.title }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
     </ul>
 
   </nav>

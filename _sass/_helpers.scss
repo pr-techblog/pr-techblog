@@ -33,6 +33,9 @@
 .img-block {
   @extend %full-width-image;
 }
+.img-circle {
+  @extend %circle;
+}
 
 /**************/
 /* Blocks */
@@ -47,7 +50,9 @@
 .no--padding {
   padding: 0;
 }
-
+.center--block {
+  @extend %center-block;
+}
 /**************/
 /* Colored Texts */
 /**************/
@@ -75,4 +80,10 @@
 }
 .text--rtl {
   direction: rtl;
+}
+.text--ellipsis {
+  display: inline-block;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

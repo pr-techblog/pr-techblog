@@ -21,7 +21,8 @@
         color: $gray;
         transition: 150ms linear;
         &:hover,
-        &:focus {
+        &:focus,
+        &.active {
             color: $black;
         }
     }

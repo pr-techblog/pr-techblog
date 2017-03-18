@@ -2,21 +2,58 @@
 layout: default
 ---
 
+{% assign author = site.data.authors[page.author] %}
+
+{% assign tweet_url = "https://twitter.com/home?status=" | append: page.title | append: site.url %}
+
+{% assign telegram_url = "https://telegram.me/share/url?url=" | append: page.title | append: site.url %}
+
 <article class="post">
-  <h1>{{ page.title }}</h1>
+  <h1 class="post__title post__title--single">{{ page.title }}</h1>
 
   <div class="post__info">
     <span>
       <span class="lazyimage">
-        <img onError="window.pr.methods.addClass('img-error', this)" src="{{ page.author_avatar }}" alt="{{ page.author }}" class="img-rounded post__info__figure inline--middle">
+        <img
+          onload="window.pr.methods.addClass('img-loaded', this.parentNode)"
+          onerror="window.pr.methods.addClass('img-error', this)" src="{{ author.avatar }}"
+          alt="{{ author.fa_name }}"
+          class="img-rounded post__info__figure inline--middle"
+        >
       </span>
-      <span class="inline--middle post__author">{{ page.author }}</span>
+      <span class="inline--middle post__author"><a href="{{ site.url }}/authors/{{ author.unique_id }}">{{ author.fa_name }}</a></span>
     </span>
     <small><em>{{ page.date | jdate: "%d %b %Y" }}</em></small>
   </div>
 
+  <div class="post__share text--left">
+    <ul class="list--unstyled list--inline">
+      <li><a class="button button--with-icon" target="_blank" href="{{ tweet_url }}">
+        <i class="icon pricon-twitter"></i>
+        توییتر
+      </a></li>
+      <li><a class="button button--with-icon" target="_blank" href="{{ telegram_url }}">
+        <i class="icon pricon-telegram"></i>
+        تلگرام
+      </a></li>
+    </ul>
+  </div>
+
   <div class="post__entry post__entry--single">
     {{ content }}
+  </div>
+
+  <div class="post__share text--center">
+    <ul class="list--unstyled list--inline">
+      <li><a class="button button--with-icon" target="_blank" href="{{ tweet_url }}">
+        <i class="icon pricon-twitter"></i>
+        توییتر
+      </a></li>
+      <li><a class="button button--with-icon" target="_blank" href="{{ telegram_url }}">
+        <i class="icon pricon-telegram"></i>
+        تلگرام
+      </a></li>
+    </ul>
   </div>
 
   {% include disqus.html %}

@@ -2,9 +2,20 @@
   @extend .img-rounded;
   display: inline-block;
   background-color: $lightGray;
-  background-image: url(/images/pr.svg);
+  background-image: url(/assets/images/pr.svg);
   background-size: cover;
   background-repeat: no-repeat;
+
+  &.img-loaded {
+    background-image: none;
+  }
+
+  &--mobile {
+    border-radius: 50%;
+    background-color: transparent;
+    border: 1px solid $border-color;
+  }
+
 }
 
 .img-error {
