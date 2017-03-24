@@ -1,7 +1,11 @@
 .pointer {
   display: inline-block;
-  width: .5em;
-  height: .5em;
+  width: .25em;
+  height: .25em;
   background-color: $blue;
   margin-left: .25em;
+}
+
+.pointer--circular {
+  border-radius: 50%;
 }
