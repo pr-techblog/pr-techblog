@@ -15,11 +15,21 @@ function loadURL(url) {
 }
 
 function addClass(className, self) {
-  self.classList.add(className);
+  if (self.classList) self.classList.add(className);
+  else self.className += ' ' + className;
 }
 
 function removeClass(className, self) {
-  self.classList.remove(className);
+  if (self.classList) self.classList.remove(className);
+  else
+    self.className = self.className
+      .replace(
+        new RegExp('(^|\\b)' +
+        className
+          .split(' ')
+          .join('|') +
+        '(\\b|$)', 'gi'),
+      ' ');
 }
 
 function scroll(x, y) {
