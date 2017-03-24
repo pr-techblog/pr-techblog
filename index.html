@@ -20,6 +20,17 @@ layout: default
       <section class="post__entry">
         <h3 class="post__title">{{ post.title }}</h3>
 
+        {% if post.tags.size > 0 %}
+        <nav class="post__tags">
+          <i class="icon pricon-tag"></i>
+          <ul class="list--unstyled list--inline">
+            {% for tag in post.tags %}
+            <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        </nav>
+        {% endif %}
+
         <div class="post__figure--mobile">
           <div class="post__info">
             <span>

@@ -37,6 +37,16 @@ layout: default
         تلگرام
       </a></li>
     </ul>
+    {% if page.tags %}
+      <nav class="post__tags post__tags--single">
+        <i class="icon pricon-tag"></i>
+        <ul class="list--unstyled list--inline">
+        {% for tag in page.tags %}
+          <li>{{ tag }}</li>
+        {% endfor %}
+        </ul>
+      </nav>
+    {% endif %}
   </div>
 
   <div class="post__entry post__entry--single">
