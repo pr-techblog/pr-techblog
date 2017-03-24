@@ -1,11 +1,8 @@
-
-.post + .post {
+.post+.post {
   margin-top: 1.5em;
-
   @include tablet() {
     margin-top: 3em;
   }
-
 }
 
 .post__container {
@@ -26,11 +23,9 @@
   flex-basis: $post-figure-size;
   margin: 0;
   flex: 0 0 auto;
-
   @include tablet() {
     display: none;
   }
-
   img {
     border: 1px solid $lightGray;
     width: 105px;
@@ -44,11 +39,9 @@
   text-align: center;
   font-size: .85em;
   color: $gray;
-
   @include tablet() {
     margin-top: 0;
   }
-
 }
 
 .post__excerpt {
@@ -59,20 +52,72 @@
 
 .post__entry {
   padding-right: 1.5em;
-
+  // Article Styles
   img {
     @extend %responsive-image;
     @extend %center-block;
+  }
+  strong,
+  b {
+    color: $bold-color;
+  }
+  em,
+  i {
+    &:after,
+    &:before {
+      font-family: monospace;
+      display: inline-block;
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+    &:before {
+      content: '«';
+    }
+    &:after {
+      content: '»';
+    }
+  }
+  ul,
+  ol {
+    padding-right: 2em;
+  }
+
+  a {
+    display: inline-block;
+    white-space: nowrap;
+  }
+
+  blockquote {
+    margin-right: 0;
+    margin-left: 0;
+    padding: .5em 2em .5em 1em;
+    color: $bold-color;
+    background-color: rgba($bold-color, .05);
+    border-right: .325em solid currentColor;
+    > p {
+      margin: 0;
+    }
+  }
+
+  code {
+    direction: ltr;
+    text-align: left;
+    display: inline-block;
+    color: $code-color;
+    background-color: rgba($code-color, .05);
+    line-height: 1;
+    padding: .25em;
+    border-radius: .25em;
   }
 
   @include tablet() {
     padding-right: 0;
   }
-
   &--single {
     padding-right: 0;
     line-height: 2;
     text-align: justify;
+    margin-bottom: 3em;
   }
 }
 
@@ -97,11 +142,9 @@
 .post__figure--mobile {
   margin-top: 1em;
   display: none;
-
   @include tablet() {
     display: block;
   }
-
   .post__info {
     margin: 0 auto;
     font-size: .85em;
