@@ -63,7 +63,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  - jalalidate # Jalali Calendar for post date
+  # - jalalidate # Jalali Calendar for post date
 
 # Exclude these files from your production _site
 exclude:
