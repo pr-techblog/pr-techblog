@@ -4,9 +4,9 @@ layout: default
 
 {% assign author = site.data.authors[page.author] %}
 
-{% assign tweet_url = "https://twitter.com/home?status=" | append: page.title | append: site.url %}
+{% assign tweet_url = "https://twitter.com/home?status=" | append: site.url | append: page.url %}
 
-{% assign telegram_url = "https://telegram.me/share/url?url=" | append: page.title | append: site.url %}
+{% assign telegram_url = "https://telegram.me/share/url?url=" | append: site.url | append: page.url %}
 
 <article class="post">
   <h1 class="post__title post__title--single">{{ page.title }}</h1>
