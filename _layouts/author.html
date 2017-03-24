@@ -24,7 +24,7 @@ layout: default
     {% for post in site.posts %}
       {% if post.author == page.unique_id %}
         <li>
-          <span class="pointer"></span>
+          <span class="pointer pointer--circular"></span>
           <a href="{{ post.url }}">{{ post.title }}</a>
         </li>
       {% endif %}
