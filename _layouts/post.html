@@ -23,7 +23,7 @@ layout: default
       </span>
       <span class="inline--middle post__author"><a href="{{ site.url }}/authors/{{ author.unique_id }}">{{ author.fa_name }}</a></span>
     </span>
-    <small><em>{{ page.date | jdate: "%d %b %Y" }}</em></small>
+    <small><em>{{ page.date | date: "%-d / %-m / %Y" }}</em></small>
   </div>
 
   <div class="post__share text--left">
