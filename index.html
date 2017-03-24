@@ -34,7 +34,7 @@ layout: default
               </span>
               <span class="inline--middle post__author">{{ author.fa_name }}</span>
             </span>
-            <small><em>{{ post.date | jdate: "%d %b %Y" }}</em></small>
+            <small><em>{{ post.date | date: "%-d / %-m / %Y" }}</em></small>
           </div>
         </div>
 
