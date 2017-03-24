@@ -57,71 +57,67 @@
     @extend %responsive-image;
     @extend %center-block;
   }
-  strong,
-  b {
-    color: $bold-color;
-  }
-  em,
-  i {
-    &:after,
-    &:before {
-      font-family: monospace;
-      display: inline-block;
-      font-size: 1.5em;
-      vertical-align: middle;
-    }
-    &:before {
-      content: '«';
-    }
-    &:after {
-      content: '»';
-    }
-  }
-  ul,
-  ol {
-    padding-right: 2em;
-  }
-
-  a {
-    display: inline-block;
-    white-space: nowrap;
-
-    @include mobile() {
-      white-space: normal;
-    }
-  }
-
-  blockquote {
-    margin-right: 0;
-    margin-left: 0;
-    padding: .5em 2em .5em 1em;
-    color: $bold-color;
-    background-color: rgba($bold-color, .05);
-    border-right: .325em solid currentColor;
-    > p {
-      margin: 0;
-    }
-  }
-
-  code {
-    direction: ltr;
-    text-align: left;
-    display: inline-block;
-    color: $code-color;
-    background-color: rgba($code-color, .05);
-    line-height: 1;
-    padding: .25em;
-    border-radius: .25em;
-  }
-
   @include tablet() {
     padding-right: 0;
+    width: 100%;
   }
   &--single {
     padding-right: 0;
     line-height: 2;
     text-align: justify;
     margin-bottom: 3em;
+    strong,
+    b {
+      color: $bold-color;
+    }
+    em,
+    i {
+      &:after,
+      &:before {
+        font-family: monospace;
+        display: inline-block;
+        font-size: 1.5em;
+        vertical-align: middle;
+      }
+      &:before {
+        content: '«';
+      }
+      &:after {
+        content: '»';
+      }
+    }
+    ul,
+    ol {
+      padding-right: 2em;
+    }
+    a {
+      display: inline-block;
+      white-space: nowrap;
+      @include mobile() {
+        white-space: normal;
+      }
+    }
+    blockquote {
+      margin-right: 0;
+      margin-left: 0;
+      padding: .5em 2em .5em 1em;
+      color: $bold-color;
+      background-color: rgba($bold-color, .05);
+      border-right: .325em solid currentColor;
+      >p {
+        margin: 0;
+      }
+    }
+    code {
+      direction: ltr;
+      text-align: left;
+      display: inline-block;
+      color: $code-color;
+      background-color: rgba($code-color, .05);
+      line-height: 1;
+      padding: .25em;
+      border-radius: .25em;
+    }
   }
 }
 
@@ -167,4 +163,44 @@
 .post__author {
   margin-right: 1em;
   white-space: nowrap; // Not break on mobile
+}
+
+.post__share {
+  position: relative;
+}
+
+.post__tags {
+
+  position: relative;
+
+  @include tablet() {
+    display: none;
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    top: .32em; // 5px
+    color: $code-color;
+  }
+
+  > ul {
+    padding-right: 1.5em;
+  }
+
+  li {
+    font-size: .85em;
+    color: $gray;
+    font-style: italic;
+  }
+
+  &--single {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    > ul {
+      margin: 0;
+    }
+  }
 }
