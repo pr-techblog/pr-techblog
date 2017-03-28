@@ -1,7 +1,16 @@
-.post+.post {
-  margin-top: 1.5em;
-  @include tablet() {
-    margin-top: 3em;
+.post {
+  @extend .img-rounded;
+  transition: 50ms linear;
+
+  &:not(.post--single):hover {
+    box-shadow: inset 0 0 1em 0 $lightGray;
+  }
+
+  &+.post {
+    margin-top: 1.5em;
+    @include tablet() {
+      margin-top: 3em;
+    }
   }
 }
 
@@ -64,7 +73,7 @@
   &--single {
     padding-right: 0;
     line-height: 2;
-    text-align: justify;
+    text-align: right;
     margin-bottom: 3em;
     strong,
     b {
@@ -170,36 +179,29 @@
 }
 
 .post__tags {
-
   position: relative;
-
   @include tablet() {
     display: none;
   }
-
   .icon {
     position: absolute;
     right: 0;
     top: .32em; // 5px
     color: $code-color;
   }
-
-  > ul {
+  >ul {
     padding-right: 1.5em;
   }
-
   li {
     font-size: .85em;
     color: $gray;
     font-style: italic;
   }
-
   &--single {
     position: absolute;
     right: 0;
     top: 0;
-
-    > ul {
+    >ul {
       margin: 0;
     }
   }

@@ -8,7 +8,7 @@ layout: default
 
 {% assign telegram_url = "https://telegram.me/share/url?url=" | append: site.url | append: page.url %}
 
-<article class="post">
+<article class="post post--single">
   <h1 class="post__title post__title--single">{{ page.title }}</h1>
 
   <div class="post__info">
@@ -65,6 +65,6 @@ layout: default
       </a></li>
     </ul>
   </div>
-
+  {% include emojiparser.html %}
   {% include disqus.html %}
 </article>
