@@ -7,6 +7,7 @@
       loadURL: loadURL,
       addClass: addClass,
       removeClass: removeClass,
+      docReady: docReady,
       goToTop: goToTop,
       parseTextForEmojis: parseTextForEmojis
     }
@@ -35,6 +36,23 @@
             .join('|') +
           '(\\b|$)', 'gi'),
         ' ');
+  }
+
+  // Same as jQuery(document).ready ; credit of youmightnotneedjquery.com
+  function docReady(fn) {
+    if (d.readyState !== 'loading') {
+      fn()
+    }
+    else if (d.addEventListener) {
+      d.addEventListener('DOMContentLoaded', fn ,false)
+    }
+    else {
+      d.attachEvent('onreadystatechange', function() {
+        if (d,readyState !== 'loading') {
+          fn()
+        }
+      })
+    }
   }
 
   // Same as jQuery(el).html() ; gets html of domNode
@@ -84,7 +102,6 @@
     var codes = Object.keys(emojiCodes)
 
     codes.forEach(function (code) {
-      console.info('replacing ' + code)
       txt = txt.replace(new RegExp(code, 'gi'), emojiCodes[code])
     })
 
