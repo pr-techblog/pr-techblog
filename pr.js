@@ -1,41 +1,99 @@
 
-window.pr = {
-  methods: {
-    loadURL: loadURL,
-    addClass: addClass,
-    removeClass: removeClass,
-    goToTop: goToTop
+(function (w, d) {
+
+  // Export to global namespace
+  w.pr = {
+    methods: {
+      loadURL: loadURL,
+      addClass: addClass,
+      removeClass: removeClass,
+      goToTop: goToTop,
+      parseTextForEmojis: parseTextForEmojis
+    }
   }
-}
 
+  // Functions and Operations
 
+  function loadURL(url) {
+    window.location.href = url
+  }
 
-function loadURL(url) {
-  window.location.href = url
-}
+  // addClass && removeClass ; credit of youmightnotneedjquery.com
+  function addClass(className, self) {
+    if (self.classList) self.classList.add(className);
+    else self.className += ' ' + className;
+  }
 
-function addClass(className, self) {
-  if (self.classList) self.classList.add(className);
-  else self.className += ' ' + className;
-}
-
-function removeClass(className, self) {
-  if (self.classList) self.classList.remove(className);
-  else
-    self.className = self.className
-      .replace(
+  function removeClass(className, self) {
+    if (self.classList) self.classList.remove(className);
+    else
+      self.className = self.className
+        .replace(
         new RegExp('(^|\\b)' +
-        className
-          .split(' ')
-          .join('|') +
-        '(\\b|$)', 'gi'),
-      ' ');
-}
+          className
+            .split(' ')
+            .join('|') +
+          '(\\b|$)', 'gi'),
+        ' ');
+  }
 
-function scroll(x, y) {
-  window.scrollTo(x, y);
-}
+  // Same as jQuery(el).html() ; gets html of domNode
+  function getHTML(domNode) {
+    return domNode.innerHTML
+  }
+  // Same as jQuery(el).html(html) ; sets html of domNode
+  function setHTML(domNode, html) {
+    domNode.innerHTML = html
+  }
 
-function goToTop() {
-  scroll(0, 0);
-}
+  // Scroll window to (x,y)
+  function scroll(x, y) {
+    window.scrollTo(x, y);
+  }
+
+  function goToTop() {
+    scroll(0, 0);
+  }
+
+  /* Emojis */
+  var emojiCodes = {
+
+    ':بوس': '😘',
+
+    ':عشق': '😍',
+
+    ':سوال': '🤔',
+
+    ':آغوش': '🤗',
+
+    ':خنده': '😂',
+
+    ':لبخند': '😊',
+
+    ':پوکرفیس': '😐',
+
+    ':چشمک': '😉',
+
+    ':دی': '😁',
+
+    ':پی': '😋',
+
+  }
+
+  function replaceAllCodesWithEmojis(txt) {
+    var codes = Object.keys(emojiCodes)
+
+    codes.forEach(function (code) {
+      console.info('replacing ' + code)
+      txt = txt.replace(new RegExp(code, 'gi'), emojiCodes[code])
+    })
+
+    return txt
+  }
+
+  function parseTextForEmojis(domNode) {
+    setHTML(domNode, replaceAllCodesWithEmojis(getHTML(domNode)))
+  }
+
+
+})(window, document)
