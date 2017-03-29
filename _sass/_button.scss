@@ -20,6 +20,12 @@
   }
 }
 
+.button--outline {
+  transition: 150ms linear;
+  background-color: transparent;
+  color: $blue;
+}
+
 .button--with-icon {
   height: 1.5em;
   min-width: 3em;

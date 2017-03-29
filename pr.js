@@ -1,4 +1,3 @@
-
 (function (w, d) {
 
   // Export to global namespace
@@ -9,7 +8,14 @@
       removeClass: removeClass,
       docReady: docReady,
       goToTop: goToTop,
-      parseTextForEmojis: parseTextForEmojis
+      parseTextForEmojis: parseTextForEmojis,
+      getAjax: getAjax,
+      createElementByTag: createElementByTag,
+      createElementById: createElementById,
+      createElementByClassName: createElementByClassName,
+      selectElementByTag: selectElementByTag,
+      selectElementById: selectElementById,
+      selectElementByClassName: selectElementByClassName
     }
   }
 
@@ -19,9 +25,37 @@
     window.location.href = url
   }
 
+  // Get a URL ; credit of youmightnotneedjquery.com
+  function getAjax(url, successFunc, errorFunc) {
+    if (!url) return Error('no url specified to getAjax')
+
+    successFunc = successFunc || function() { console.info('Success') }
+    errorFunc = errorFunc || function() { console.error('Error') }
+
+    var req = new XMLHttpRequest()
+    req.open('GET', url, true)
+
+    req.timeout = 1500 // 15sec timeout
+
+    req.onreadystatechange = function() {
+      console.log(this)
+      if (this.readyState === 4) {
+        if (this.status >= 200 && this.status < 400) {
+          var response = this.responseText
+          successFunc(response)
+        }
+        else {
+          errorFunc()
+        }
+      }
+    }
+
+    req.send();
+  }
+
   // addClass && removeClass ; credit of youmightnotneedjquery.com
   function addClass(className, self) {
-    if (self.classList) self.classList.add(className);
+    if (self.classList) self.classList.add(className)
     else self.className += ' ' + className;
   }
 
@@ -38,17 +72,45 @@
         ' ');
   }
 
+  function createElementByTag(tag) {
+    return d.createElement(tag)
+  }
+
+  function createElementById(tag, id) {
+    var el = createElementByTag(tag)
+    el.id = id
+    return el
+  }
+
+  function createElementByClassName(tag, className) {
+    var el = createElementByTag(tag)
+    addClass(className, el)
+    return el
+  }
+
+  function selectElementByTag(tag) {
+    return d.querySelector(tag)
+  }
+
+  function selectElementById(id) {
+    return d.getElementById(id)
+  }
+
+  function selectElementByClassName(className) {
+    return d.querySelector(className)
+  }
+
   // Same as jQuery(document).ready ; credit of youmightnotneedjquery.com
   function docReady(fn) {
     if (d.readyState !== 'loading') {
       fn()
     }
     else if (d.addEventListener) {
-      d.addEventListener('DOMContentLoaded', fn ,false)
+      d.addEventListener('DOMContentLoaded', fn, false)
     }
     else {
-      d.attachEvent('onreadystatechange', function() {
-        if (d,readyState !== 'loading') {
+      d.attachEvent('onreadystatechange', function () {
+        if (d, readyState !== 'loading') {
           fn()
         }
       })

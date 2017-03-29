@@ -6,6 +6,8 @@ layout: default
 
 {% assign tweet_url = "https://twitter.com/home?status=" | append: site.url | append: page.url %}
 
+{% assign tweet_url = "https://twitter.com/intent/tweet?url=" | append: page.url | append: "&via=" | append: site.url | append: "&text=" | append: page.title %}
+
 {% assign telegram_url = "https://telegram.me/share/url?url=" | append: site.url | append: page.url %}
 
 <article class="post post--single">

@@ -1,3 +1,7 @@
+---
+layout: compress
+---
+
 <!DOCTYPE html>
 <html>
 
@@ -10,11 +14,15 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+  <!--[if lt IE 8]>
+    <script>window.location.href = '/lessthanie8.html'</script>
+  <![endif]-->
+
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
   <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml"
   />
 
-  <script src="{{ site.baseurl }}/pr.js"></script>
+  <script src="/pr.js"></script>
 
 </head>
 
@@ -34,9 +42,8 @@
     {% include footer.html %}
 
   </div>
-
-  {% include pr.html %}
   {% include analytics.html %}
+
 </body>
 
 </html>
