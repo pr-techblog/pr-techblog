@@ -77,3 +77,9 @@ collections:
   authors:
     output: true
     permalink: /authors/:path/
+
+# Configuration used by compress layout
+compress_html:
+  clippings: all
+  comments: ["<!--", "-->"]
+  endings: all
