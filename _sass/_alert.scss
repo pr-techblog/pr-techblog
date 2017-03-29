@@ -1,0 +1,9 @@
+.alert {
+  display: block;
+  margin-bottom: 1em;
+  color: $bold-color;
+  background-color: rgba($bold-color, .05);
+  padding: .5em .75em;
+  border-radius: .5em;
+  line-height: 1.7;
+}
