@@ -35,10 +35,9 @@
     var req = new XMLHttpRequest()
     req.open('GET', url, true)
 
-    req.timeout = 1500 // 15sec timeout
+    req.timeout = 15000 // 15sec timeout
 
     req.onreadystatechange = function() {
-      console.log(this)
       if (this.readyState === 4) {
         if (this.status >= 200 && this.status < 400) {
           var response = this.responseText

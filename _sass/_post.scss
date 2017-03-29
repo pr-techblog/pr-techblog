@@ -2,9 +2,9 @@
   @extend .img-rounded;
   transition: 50ms linear;
 
-  &:not(.post--single):hover {
-    box-shadow: inset 0 0 1em 0 $lightGray;
-  }
+  // &:not(.post--single):hover {
+  //   box-shadow: inset 0 0 1em 0 $lightGray;
+  // }
 
   &+.post {
     margin-top: 1.5em;
@@ -20,7 +20,7 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  cursor: pointer;
+  // cursor: pointer;
   @include tablet() {
     flex-direction: column;
   }

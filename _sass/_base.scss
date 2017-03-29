@@ -10,8 +10,9 @@ a {
   color: $blue;
   text-decoration: none;
 	cursor: pointer;
+  transition: color 150ms linear;
   &:hover, &:active {
-    color: $blue;
+    color: lighten($blue, 15%);
   }
 }
 

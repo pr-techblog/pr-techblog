@@ -6,7 +6,7 @@ layout: default
   {% for post in site.posts %}
   <article class="post">
 
-    <div onClick="window.pr.methods.loadURL('{{ site.url }}{{ post.url }}')" class="post__container">
+    <div class="post__container">
       <figure class="post__figure">
 
         {% assign author = site.data.authors[post.author] %}
@@ -18,7 +18,9 @@ layout: default
       </figure>
 
       <section class="post__entry">
-        <h3 class="post__title">{{ post.title }}</h3>
+        <h3 class="post__title">
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </h3>
 
         {% if post.tags.size > 0 %}
         <nav class="post__tags">
