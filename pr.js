@@ -109,7 +109,7 @@
     }
     else {
       d.attachEvent('onreadystatechange', function () {
-        if (d, readyState !== 'loading') {
+        if (d.readyState !== 'loading') {
           fn()
         }
       })
