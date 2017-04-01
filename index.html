@@ -27,7 +27,7 @@ layout: default
           <i class="icon pricon-tag"></i>
           <ul class="list--unstyled list--inline">
             {% for tag in post.tags %}
-            <li>{{ tag }}</li>
+            <li>#{{ tag }}</li>
             {% endfor %}
           </ul>
         </nav>
@@ -58,3 +58,4 @@ layout: default
   </article>
   {% endfor %}
 </div>
+{% include emojiparser.html %}
