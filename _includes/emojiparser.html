@@ -1,5 +1,9 @@
 <script>
   window.pr.methods.docReady(function() {
-    window.pr.methods.parseTextForEmojis(document.querySelector('.post__entry--single'))
+    var singleEntry = window.pr.methods.selectElementByClassName('.post__entry--single');
+    var excerptEntry = window.pr.methods.selectElementByClassName('.post__excerpt');
+
+    if (singleEntry) window.pr.methods.parseTextForEmojis(singleEntry);
+    else if (excerptEntry) window.pr.methods.parseTextForEmojis(excerptEntry);
   })
 </script>
