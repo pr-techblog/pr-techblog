@@ -2,21 +2,22 @@
 <hr />
 <div class="comments">
   <div id="disqus_thread"></div>
+  <script async defer src='https://{{ site.disqus }}.disqus.com/embed.js' onerror="disqusHandler();"></script>
   <script type="text/javascript">
-    (function (w) {
+    var disqusHandler = (function (w) {
       var methods = w.pr.methods;
 
-      methods.docReady(function () {
+      /* methods.docReady(function () {
         loadDisqusScript()
       });
 
       function loadDisqusScript() {
         methods.getAjax('https://{{ site.disqus }}.disqus.com/embed.js', null, function (e) {
           addDisqusErrorIfNotPresent();
-          /* Parse any emoji inside error */
+          // Parse any emoji inside error
           methods.parseTextForEmojis(document.getElementById('comment__error'));
         })
-      }
+      } */
 
       function addDisqusErrorIfNotPresent() {
         var comments = methods.selectElementByClassName('.comments');
@@ -24,6 +25,8 @@
         if (!methods.selectElementById('comment__error')) {
           /* Add error to .comments */
           comments.appendChild(createDisqusError());
+          /* Parse any emoji inside error */
+          methods.parseTextForEmojis(document.getElementById('comment__error'));
         }
       }
 
@@ -35,6 +38,9 @@
 
         return err;
       }
+
+      return addDisqusErrorIfNotPresent;
+
     })(window);
   </script>
   <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
