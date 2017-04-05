@@ -4,7 +4,7 @@ farzad:
   unique_id: farzad
   github: https://github.com/farskid
   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
-  avatar: /assets/images/farzad.jpeg
+  avatar: /assets/images/farzad.jpg
   twitter: https://twitter.com/Farzad_YZ
   website: https://farzadyz.com
 nima:
@@ -12,7 +12,7 @@ nima:
   en_name: Nima Hashemi
   unique_id: nima
   github: https://github.com/niima
-  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz,
+  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
   avatar: /assets/images/nima.jpeg
   twitter: https://twitter.com/_whoamiii
   website: https://niima.github.io
@@ -21,7 +21,7 @@ amir:
   en_name: Amir Momenian
   unique_id: amir
   github: https://github.com/nainemom
-  stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz,
+  stackoverflow: http://stackoverflow.com/users/3077365/nainemom
   avatar: /assets/images/amir.png
   twitter: https://twitter.com/nainemom
   website: https://morde.ir
