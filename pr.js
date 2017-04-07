@@ -158,6 +158,50 @@
     ':پی': '😋',
 
   }
+  function yahooCodesToEmoji(str){
+      let chart = [
+          { replace: '🤗', pattern: /\>:(-?)d\<+/ig, dublicateBy: /\>/ig}, // >:D< 
+          { replace: '😂', pattern: /:(-?)\){2,}/ig, double: true, dublicateBy: /\)/ig}, // :))))
+          { replace: '😀', pattern: /:(-?)\)/ig}, // :)
+          { replace: '😁', pattern: /:(-?)d+/ig, dublicateBy: /d/ig}, // :DDD
+          { replace: '🤣', pattern: /=(-?)\){2,}/ig, double: true, dublicateBy: /\)/ig}, // =))))
+          { replace: '😊', pattern: /\^_\^/ig}, // ^_^
+          { replace: '😋', pattern: /:(-?)p+/ig, dublicateBy: /p/ig}, // :p
+          { replace: '😘', pattern: /:(-?)\*{2,}/ig, double: true, dublicateBy: /\*/ig}, // :**
+          { replace: '😙', pattern: /:(-?)\*/ig}, // :*
+          { replace: '🤔', pattern: /:(-?)\?+/ig, dublicateBy: /\?/ig}, // :?
+          { replace: '😑', pattern: /:(-?)\|{2,}/ig, double: true, dublicateBy: /\|/ig}, // :||
+          { replace: '😐', pattern: /:(-?)\|/ig}, // :|
+          { replace: '😉', pattern: /;(-?)\)+/ig, dublicateBy: /\)/ig}, // ;)
+          { replace: '😭', pattern: /:(-?)\({2,}/ig, double: true, dublicateBy: /\(/ig}, // :((
+          { replace: '☹', pattern: /:(-?)\(/ig}, // :(
+          { replace: '😍', pattern: /:(-?)x+/ig, dublicateBy: /x/ig}, // :x 
+          { replace: '😌', pattern: /:(-?)\"\>+/ig, dublicateBy: /\>/ig}, // :">
+          { replace: '😲', pattern: /:(-?)o+/ig, dublicateBy: /\o/ig}, // :o
+          { replace: '😢', pattern: /:'\(+/ig, dublicateBy: /\(/ig}, // :'(
+          { replace: '🤢', pattern: /:(-?)\&+/ig, dublicateBy: /\&/ig}, // :&
+      ];
+      let ret = str;
+      chart.forEach( (val)=>{
+          if( val.dublicateBy ){
+              let founds = str.match(val.pattern);
+              if( founds ){
+                  founds.forEach( (found)=>{
+                      let repeatLength = found.match(val.dublicateBy);
+                      repeatLength = repeatLength? repeatLength.length: 1;
+                      if( val.double ){
+                          repeatLength = repeatLength-1;
+                      }
+                      ret = ret.replace( found, val.replace.repeat( repeatLength ) )
+                  });
+              }
+          }
+          else{
+              ret = ret.replace( val.pattern, val.replace )
+          }
+      });
+      return ret;
+  }
 
   function replaceAllCodesWithEmojis(txt) {
     var codes = Object.keys(emojiCodes)
@@ -165,6 +209,7 @@
     codes.forEach(function (code) {
       txt = txt.replace(new RegExp(code, 'gi'), emojiCodes[code])
     })
+    txt = yahooCodesToEmoji(txt);
 
     return txt
   }
