@@ -1,6 +1,7 @@
 ---
 layout: post
 title: مینیفای کردن HTML و CSS در جکیل
+pdate: 1396-1-13
 author: farzad
 tags: jekyll minify_assets HTML CSS جکیل
 ---
