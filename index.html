@@ -14,7 +14,7 @@ layout: default
         <span class="lazyimage">
           <img width="105" height="105" onError="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ author.avatar }}">
         </span>
-        <small class="post__date"><em>{{ post.date | date: "%-d / %-m / %Y" }}</em></small>
+        <small class="post__date"><em>{{ post.pdate | date: "%-d / %-m / %Y" }}</em></small>
       </figure>
 
       <section class="post__entry">
@@ -47,7 +47,7 @@ layout: default
               </span>
               <span class="inline--middle post__author">{{ author.fa_name }}</span>
             </span>
-            <small><em>{{ post.date | date: "%-d / %-m / %Y" }}</em></small>
+            <small><em>{{ post.pdate | date: "%-d / %-m / %Y" }}</em></small>
           </div>
         </div>
 
