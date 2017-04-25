@@ -1,8 +1,13 @@
 lang: ruby
+
+rvm:
+  - 2.4.0
+
 before_install:
   - gem install jekyll
   - gem install jekyll-sitemap
   - gem install jekyll-feed
+
 script:
   - jekyll build -d build
 
