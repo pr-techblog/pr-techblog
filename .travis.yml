@@ -1,0 +1,18 @@
+lang: ruby
+before_install:
+  - gem install jekyll
+  - gem install jekyll-sitemap
+  - gem install jekyll-feed
+script:
+  - jekyll build -d build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  local_dir: build
+  target_branch: master
+  fqdn: pullrequest.ir
+  repo: pr-techblog/pr-techblog.github.io
+  on:
+    branch: master
