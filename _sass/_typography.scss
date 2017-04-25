@@ -4,6 +4,11 @@
   src: url('/assets/fonts/vazir.woff') format('woff')
 }
 
+@font-face {
+  font-family: 'vazir-bold';
+  src: url('/assets/fonts/vazir-bold.woff') format('woff')
+}
+
 html {
   font-size: 1rem;
 }
@@ -53,4 +58,8 @@ h4 {
 
 p {
   margin: 1em 0;
+}
+
+strong {
+  font-family: 'vazir-bold', $font-primary;
 }
