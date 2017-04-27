@@ -1,4 +1,5 @@
 farzad:
+  name: فرزاد یوسف زاده
   fa_name: فرزاد یوسف زاده
   en_name: Farzad YZ
   unique_id: farzad
@@ -8,6 +9,7 @@ farzad:
   twitter: https://twitter.com/Farzad_YZ
   website: https://farzadyz.com
 nima:
+  name: نیما هاشمی
   fa_name: نیما هاشمی
   en_name: Nima Hashemi
   unique_id: nima
@@ -17,6 +19,7 @@ nima:
   twitter: https://twitter.com/_whoamiii
   website: https://niima.github.io
 amir:
+  name: امیر مومنیان
   fa_name: امیر مومنیان
   en_name: Amir Momenian
   unique_id: amir
@@ -26,6 +29,7 @@ amir:
   twitter: https://twitter.com/nainemom
   website: https://morde.ir
 saeed:
+  name: سعید علیپور
   fa_name: سعید علیپور
   en_name: Saeed Alipoor
   unique_id: saeed
