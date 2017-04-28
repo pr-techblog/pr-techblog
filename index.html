@@ -41,11 +41,11 @@ layout: default
                   onload="window.pr.methods.addClass('img-loaded', this.parentNode)"
                   onerror="window.pr.methods.addClass('img-error', this)"
                   src="{{ author.avatar }}"
-                  alt="{{ author.fa_name }}"
+                  alt="{{ author.name }}"
                   class="img-circle post__info__figure"
                 >
               </span>
-              <span class="inline--middle post__author">{{ author.fa_name }}</span>
+              <span class="inline--middle post__author">{{ author.name }}</span>
             </span>
             <small><em>{{ post.pdate | date: "%-d / %-m / %Y" }}</em></small>
           </div>

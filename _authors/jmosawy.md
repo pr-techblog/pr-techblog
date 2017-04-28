@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: جف موسوی
-en_name: Jeff Mosawy
+name: جف موسوی
 unique_id: jmosawy
 title: Jeff Mosawy
 github: https://github.com/jmosawy

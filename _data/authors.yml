@@ -1,7 +1,5 @@
 farzad:
   name: فرزاد یوسف زاده
-  fa_name: فرزاد یوسف زاده
-  en_name: Farzad YZ
   unique_id: farzad
   github: https://github.com/farskid
   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
@@ -10,8 +8,6 @@ farzad:
   website: https://farzadyz.com
 nima:
   name: نیما هاشمی
-  fa_name: نیما هاشمی
-  en_name: Nima Hashemi
   unique_id: nima
   github: https://github.com/niima
   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
@@ -20,8 +16,6 @@ nima:
   website: https://niima.github.io
 amir:
   name: امیر مومنیان
-  fa_name: امیر مومنیان
-  en_name: Amir Momenian
   unique_id: amir
   github: https://github.com/nainemom
   stackoverflow: http://stackoverflow.com/users/3077365/nainemom
@@ -30,8 +24,6 @@ amir:
   website: https://morde.ir
 saeed:
   name: سعید علیپور
-  fa_name: سعید علیپور
-  en_name: Saeed Alipoor
   unique_id: saeed
   title: سعید علیپور
   github: https://github.com/saeedalipoor
@@ -41,8 +33,6 @@ saeed:
   bio: "A 3D Man; Dad, Dreamer, Devigner :)"
 jeff:
   name: جف موسوی
-  fa_name: جف موسوی
-  en_name: Jeff Mosawy
   unique_id: jmosawy
   title: Jeff Mosawy
   github: https://github.com/jmosawy
