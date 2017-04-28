@@ -39,3 +39,15 @@ saeed:
   avatar: /assets/images/saeed.jpeg
   twitter: https://twitter.com/saeednitrate
   bio: "A 3D Man; Dad, Dreamer, Devigner :)"
+jeff:
+  name: جف موسوی
+  fa_name: جف موسوی
+  en_name: Jeff Mosawy
+  unique_id: jmosawy
+  title: Jeff Mosawy
+  github: https://github.com/jmosawy
+  stackoverflow: http://stackoverflow.com/users/3438331/jmosawy
+  avatar: /assets/images/jmosawy.jpg
+  twitter: https://twitter.com/jmosawy
+  website: https://jmosawy.com
+  bio: "Full Stack Developer & JavaScript Enthusiast"
