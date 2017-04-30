@@ -12,7 +12,7 @@ layout: default
         {% assign author = site.data.authors[post.author] %}
 
         <span class="lazyimage">
-          <img width="105" height="105" onError="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ author.avatar }}">
+          <img width="105" height="105" onload="window.pr.methods.addClass('img-loaded', this.parentNode)" onerror="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ author.avatar }}">
         </span>
         <small class="post__date"><em>{{ post.pdate | date: "%-d / %-m / %Y" }}</em></small>
       </figure>
