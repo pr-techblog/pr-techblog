@@ -41,3 +41,12 @@ jmosawy:
   twitter: https://twitter.com/jmosawy
   website: https://jmosawy.com
   bio: "Full Stack Developer & JavaScript Enthusiast"
+jedlab:
+  name: جدلب
+  unique_id: jedlab
+  title: JEDLab (Java Education & Development Lab)
+  github: https://github.com/jedlab
+  avatar: /assets/images/jedlab.png
+  twitter: https://twitter.com/omidp
+  website: http://jedlab.ir
+  bio: "unapologetic Java developer"
