@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: جدلب
-en_name: JEDLab
+name: جدلب
 unique_id: jedlab
 title: جدلب
 github: https://github.com/jedlab
