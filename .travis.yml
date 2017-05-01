@@ -10,7 +10,6 @@ before_install:
 
 script:
   - jekyll build -d buildilo
-  - ls buildilo
 
 deploy:
   provider: pages
