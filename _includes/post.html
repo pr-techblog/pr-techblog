@@ -10,7 +10,7 @@
       <span class="lazyimage">
         <img width="105" height="105" onload="window.pr.methods.addClass('img-loaded', this.parentNode)" onerror="window.pr.methods.addClass('img-error', this)" class="img-block img-rounded" src="{{ author.avatar }}">
       </span>
-      <small class="post__date"><em>{{ post.date | date: "%A %d %b %Y" }}</em></small>
+      <small class="post__date"><em>{{ post.pdate }}</em></small>
     </figure>
 
     <section class="post__entry">
