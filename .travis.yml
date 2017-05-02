@@ -7,7 +7,8 @@ before_install:
   - gem install jekyll
   - gem install jekyll-sitemap
   - gem install jekyll-feed
-
+  - gem install jekyll-archives
+  
 script:
   - jekyll build -d buildilo
 
