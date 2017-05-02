@@ -32,6 +32,8 @@
   flex-basis: $post-figure-size;
   margin: 0;
   flex: 0 0 auto;
+  position: sticky;
+  top: 0;
   @include tablet() {
     display: none;
   }
