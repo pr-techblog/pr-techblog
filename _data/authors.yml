@@ -1,6 +1,5 @@
 farzad:
-  fa_name: فرزاد یوسف زاده
-  en_name: Farzad YZ
+  name: فرزاد یوسف زاده
   unique_id: farzad
   github: https://github.com/farskid
   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
@@ -8,8 +7,7 @@ farzad:
   twitter: https://twitter.com/Farzad_YZ
   website: https://farzadyz.com
 nima:
-  fa_name: نیما هاشمی
-  en_name: Nima Hashemi
+  name: نیما هاشمی
   unique_id: nima
   github: https://github.com/niima
   stackoverflow: http://stackoverflow.com/users/2784512/farzad-yz
@@ -17,8 +15,7 @@ nima:
   twitter: https://twitter.com/_whoamiii
   website: https://niima.github.io
 amir:
-  fa_name: امیر مومنیان
-  en_name: Amir Momenian
+  name: امیر مومنیان
   unique_id: amir
   github: https://github.com/nainemom
   stackoverflow: http://stackoverflow.com/users/3077365/nainemom
@@ -26,8 +23,7 @@ amir:
   twitter: https://twitter.com/nainemom
   website: https://morde.ir
 saeed:
-  fa_name: سعید علیپور
-  en_name: Saeed Alipoor
+  name: سعید علیپور
   unique_id: saeed
   title: سعید علیپور
   github: https://github.com/saeedalipoor
@@ -35,3 +31,22 @@ saeed:
   avatar: /assets/images/saeed.jpeg
   twitter: https://twitter.com/saeednitrate
   bio: "A 3D Man; Dad, Dreamer, Devigner :)"
+jmosawy:
+  name: جف موسوی
+  unique_id: jmosawy
+  title: Jeff Mosawy
+  github: https://github.com/jmosawy
+  stackoverflow: http://stackoverflow.com/users/3438331/jmosawy
+  avatar: /assets/images/jmosawy.jpg
+  twitter: https://twitter.com/jmosawy
+  website: https://jmosawy.com
+  bio: "Full Stack Developer & JavaScript Enthusiast"
+jedlab:
+  name: جدلب
+  unique_id: jedlab
+  title: JEDLab (Java Education & Development Lab)
+  github: https://github.com/jedlab
+  avatar: /assets/images/jedlab.png
+  twitter: https://twitter.com/omidp
+  website: http://jedlab.ir
+  bio: "unapologetic Java developer"

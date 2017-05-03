@@ -1,0 +1,9 @@
+---
+layout: default
+---
+<div class="posts">
+  {% for post in site.posts %}
+    {% include post.html post = post %}
+  {% endfor %}
+</div>
+{% include emojiparser.html %}

@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: سعید علیپور
-en_name: Saeed Alipoor
+name: سعید علیپور
 unique_id: saeed
 title: سعید علیپور
 github: https://github.com/saeedalipoor

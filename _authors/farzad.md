@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: فرزاد یوسف زاده
-en_name: Farzad YZ
+name: فرزاد یوسف زاده
 unique_id: farzad
 title: فرزاد یوسف زاده
 github: https://github.com/farskid

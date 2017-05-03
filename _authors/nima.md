@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: نیما هاشمی
-en_name: Nima Hashemi
+name: نیما هاشمی
 unique_id: nima
 title: نیما هاشمی
 github: https://github.com/niima
