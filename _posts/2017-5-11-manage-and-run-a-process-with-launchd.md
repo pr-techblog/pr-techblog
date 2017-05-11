@@ -3,7 +3,7 @@ layout: post
 title:  مدیریت و اجرای یک process به کمک launchd در سیستم عامل macos
 pdate: 1396-2-21
 author: arastu
-tags: macos, process, launchd, systemd, upstart, sysvinit
+tags: macos process launchd systemd upstart sysvinit
 ---
 
 معمولا در سیستم‌های شبه یونیکس و تقریبا همه سیستم عامل‌ها برای مدیریت، راه‌اندازی و توقف اجرای یک process، سرویس یا اسکریپت در سیستم عامل از ابزارهای به نام operating system service management استفاده می‌شود.
