@@ -17,7 +17,7 @@ avatar: https://raw.githubusercontent.com/barryclark/jekyll-now/master/images/je
 
 # Includes an icon in the footer for each username you enter
 github: https://github.com/pr-techblog
-twitter: https://twitter.com/pr-techblog
+twitter: https://twitter.com/pr_techblog
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts
 # You can find your shortname on the Settings page of your Disqus account
@@ -43,7 +43,7 @@ baseurl: ""
 permalink: /:title/
 
 # The release of Jekyll Now that you're using
-version: v1.2.0
+version: v3.4.3
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
@@ -55,6 +55,13 @@ kramdown:
     # Use existing pygments syntax highlighting css
     css_class: 'highlight'
 
+# Jekyll Archives to create tags and category and ... pages
+jekyll-archives:
+  enabled: all
+  layout: archives
+  permalinks:
+    tags: '/tag/:name/'
+
 # Set the Sass partials directory, as we're using @imports
 sass:
   style: :compressed # You might prefer to minify using :compressed
@@ -63,7 +70,7 @@ sass:
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
-  # - jalalidate # Jalali Calendar for post date
+  - jekyll-archives # Create archive pages
 
 # Exclude these files from your production _site
 exclude:

@@ -19,13 +19,13 @@ layout: default
         <img
           onload="window.pr.methods.addClass('img-loaded', this.parentNode)"
           onerror="window.pr.methods.addClass('img-error', this)" src="{{ author.avatar }}"
-          alt="{{ author.fa_name }}"
+          alt="{{ author.name }}"
           class="img-rounded post__info__figure inline--middle"
         >
       </span>
-      <span class="inline--middle post__author"><a href="{{ site.url }}/authors/{{ author.unique_id }}">{{ author.fa_name }}</a></span>
+      <span class="inline--middle post__author"><a href="{{ site.url }}/authors/{{ author.unique_id }}">{{ author.name }}</a></span>
     </span>
-    <small><em>{{ page.pdate | date: "%-d / %-m / %Y" }}</em></small>
+    <small><em>{{ page.pdate }}</em></small>
   </div>
 
   <div class="post__share text--left">
@@ -44,7 +44,7 @@ layout: default
         <i class="icon pricon-tag"></i>
         <ul class="list--unstyled list--inline">
         {% for tag in page.tags %}
-          <li>#{{ tag }}</li>
+          <li><a href="{{site.baseurl}}/tag/{{tag | downcase}}">#{{ tag }}</a></li>
         {% endfor %}
         </ul>
       </nav>

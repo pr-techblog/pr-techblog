@@ -8,7 +8,7 @@ layout: default
     <img class=" img-rounded author--single__figure" src="{{ page.avatar }}">
   </span>
 
-  <h1 class="post__title">{{ page.fa_name }}</h1>
+  <h1 class="post__title">{{ page.name }}</h1>
 
   {% if page.bio %}
   <div class="author--single__bio text--center text--ltr">
@@ -18,7 +18,7 @@ layout: default
 
   <hr />
 
-  <h3 class="text--right">مطالب {{ page.fa_name }} در {{ site.name }}</h3>
+  <h3 class="text--right">مطالب {{ page.name }} در {{ site.name }}</h3>
 
   <ul class="list--unstyled text--right">
     {% for post in site.posts %}

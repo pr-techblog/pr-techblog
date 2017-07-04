@@ -1,7 +1,6 @@
 ---
 layout: author
-fa_name: امیر مومنیان
-en_name: Amir Momenian
+name: امیر مومنیان
 unique_id: amir
 title: امیر مومنیان
 github: https://github.com/nainemom
