@@ -99,3 +99,13 @@ mahmoud:
   twitter: https://twitter.com/MahmoudEskandri
   website: http://phpmysql.ir
   bio: "Just a developer & penetration tester"
+mehrad:
+  name: مهراد روستا
+  unique_id: mehrad
+  title: مهراد روستا
+  github: https://github.com/mehrad77
+  stackoverflow: https://stackoverflow.com/users/7081377/mehrad77
+  avatar: /assets/images/mehrad.jpg
+  twitter: https://twitter.com/mehrad77
+  website: https://mehrad.js.org
+  bio: "Developer, Blogger, Enthusiastic and Geek; I'm serious about enthusiastic part."
