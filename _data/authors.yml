@@ -77,8 +77,8 @@ aien:
   stackoverflow: https://stackoverflow.com/users/3538479/aien-saidi
   avatar: /assets/images/aien.jpg
   twitter: https://twitter.com/aientech
-  website: http://saidi27.com
-  bio: "Aien is a full-stack web developer. He is currently a senior PHP developer and works with popular frameworks (e.g Symfony, etc), also popular JavaScript frameworks like React and Next.js. He is passionate about learning new things and technologies.r"
+  website: https://www.saidi27.com
+  bio: "Full stack Web developer and photographer. Classic, feminist and ideologist. Astrology enthusiast and cosmopolitan, and also a junior music producer."
 erfun:
   name: عرفان صحاف نژاد
   unique_id: erfun
@@ -89,3 +89,23 @@ erfun:
   twitter: https://twitter.com/erfansahaf
   website: http://erfun.me
   bio: "Just a normal guy who works as a Back-End developer."
+mahmoud:
+  name: محمود اسکندری
+  unique_id: mahmoud
+  title: محمود اسکندری
+  github: https://github.com/mahmoud-eskandari
+  stackoverflow: https://stackoverflow.com/users/3275298/m-eskandari
+  avatar: /assets/images/mahmoud.jpg
+  twitter: https://twitter.com/MahmoudEskandri
+  website: http://phpmysql.ir
+  bio: "Just a developer & penetration tester"
+mehrad:
+  name: مهراد روستا
+  unique_id: mehrad
+  title: مهراد روستا
+  github: https://github.com/mehrad77
+  stackoverflow: https://stackoverflow.com/users/7081377/mehrad77
+  avatar: /assets/images/mehrad.jpg
+  twitter: https://twitter.com/mehrad77
+  website: https://mehrad.js.org
+  bio: "Developer, Blogger, Enthusiastic and Geek; I'm serious about enthusiastic part."
