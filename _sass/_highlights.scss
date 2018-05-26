@@ -1,10 +1,6 @@
 .highlight {
-  background-color: rgba($gray, .05);
-  padding: .5em .5em .5em .625em;
-  border: 1px solid rgba($gray, .3);
   // box-shadow: .25em .25em rgba(0, 0, 0, 0.1);
   margin: 1.25em 0 1.25em 0;
-  overflow: scroll;
   direction: ltr;
   text-align: left;
 }
@@ -22,6 +18,11 @@ code {
 
 .highlight pre {
   margin: 0;
+  padding: .5em .5em .5em .625em;
+  background-color: rgba($gray, .09);
+  border: 1px solid rgba($gray, .3);
+  overflow: auto;
+  font-size: 0.9em;
 }
 
 .highlight .c {
