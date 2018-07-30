@@ -9,9 +9,11 @@ showup_in_nav: true
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/0.9.9/trix.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/0.9.9/trix.js"></script>
+<script type="text/javascript" src="https://unpkg.com/idate@0.1.5/dist/idate.min.js"></script>
 <script type="text/javascript" src="https://unpkg.com/upndown@2.1.0/lib/upndown.bundle.min.js"></script>
 
 <div style="direction: ltr; text-align: left;">
+  <input placeholder="اسم شما" id="author">
   <input placeholder="عنوان" id="title">
 
   <div id="trix-toolbar" class="toolbar">
@@ -46,17 +48,25 @@ function formatTxt(format) {
   }
 }
 function gotoGithub() {
-  var title = document.getElementById('title');
+  var title = document.getElementById('title').value;
+  var author = document.getElementById('author').value;
   var body = document.getElementById('trix-editor').value;
-  var post = "---\n"
-  var post = "title:" + title + "\n"
-  var post = "title:" + title + "\n"
+  var pdate = new IDate();
+
+  var post = "---\n";
+  post += "layout: post\n";
+  post += "title: " + title + "\n";
+  post += "pdate: " + pdate.getFullYear() + "-" + (pdate.getMonth() + 1) + "-" + pdate.getDate() + "\n";
+  post += "author: " + author + "\n";
+  post += "---\n";
+
   var und = new upndown();
   und.convert(body, function(err, markdown) {
       if(err) {
         alert('error!');
       } else {
-        console.log(markdown);
+        post += markdown;
+        console.log(post);
       }
   });
 }
