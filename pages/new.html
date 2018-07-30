@@ -9,14 +9,23 @@ showup_in_nav: true
 
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/trix/0.9.9/trix.css">
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/trix/0.9.9/trix.js"></script>
+<script type="text/javascript" src="https://unpkg.com/upndown@2.1.0/lib/upndown.bundle.min.js"></script>
 
 <div style="direction: ltr; text-align: left;">
-  <input placeholder="عنوان">
-  <a id="addimg" onclick="addImg()">اضافه کردن تصویر</a>
-  <trix-editor id="trix-editor">
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
-  </trix-editor>
+  <input placeholder="عنوان" id="title">
 
+  <div id="trix-toolbar" class="toolbar">
+    <button type="button" onclick="formatTxt('bold')">بولد</button>
+    <button type="button" onclick="formatTxt('italic')">ایتالیک</button>
+    <button type="button" onclick="formatTxt('strike')">خط</button>
+    <button type="button" onclick="formatTxt('quote')">نقل قول</button>
+    <button type="button" onclick="formatTxt('code')">کد</button>
+    <button type="button" onclick="addImg()">اضافه کردن تصویر</a>
+    <button type="button" onclick="formatTxt('bullet')">لیست بدون شماره</button>
+    <button type="button" onclick="formatTxt('number')">لیست شماره دار</button>
+  </div>
+  <trix-editor id="trix-editor" toolbar="trix-toolbar"></trix-editor>
+  <button onclick="gotoGithub()">انتشار</button>
 </div>
 
 <script>
@@ -26,5 +35,29 @@ function addImg () {
     var trix = document.getElementById('trix-editor');
     trix.editor.insertHTML('<img src="' +  url + '"></img>');
   }
+}
+function formatTxt(format) {
+  var trix = document.getElementById('trix-editor');
+  var currentAttributes = trix.editor.composition.currentAttributes;
+  if(currentAttributes[format]) {
+    trix.editor.deactivateAttribute(format)
+  } else {
+    trix.editor.activateAttribute(format)
+  }
+}
+function gotoGithub() {
+  var title = document.getElementById('title');
+  var body = document.getElementById('trix-editor').value;
+  var post = "---\n"
+  var post = "title:" + title + "\n"
+  var post = "title:" + title + "\n"
+  var und = new upndown();
+  und.convert(body, function(err, markdown) {
+      if(err) {
+        alert('error!');
+      } else {
+        console.log(markdown);
+      }
+  });
 }
 </script>
