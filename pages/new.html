@@ -12,11 +12,19 @@ showup_in_nav: true
 
 <div style="direction: ltr; text-align: left;">
   <input placeholder="عنوان">
-  <div>
-      <trix-editor></trix-editor>
-  </div>
+  <a id="addimg" onclick="addImg()">اضافه کردن تصویر</a>
+  <trix-editor id="trix-editor">
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"/>
+  </trix-editor>
+
 </div>
 
 <script>
-
+function addImg () {
+  var url = prompt('مقصد عکس را وارد کنید:');
+  if (url && url.indexOf('http') === 0) {
+    var trix = document.getElementById('trix-editor');
+    trix.editor.insertHTML('<img src="' +  url + '"></img>');
+  }
+}
 </script>
