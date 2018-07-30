@@ -1,0 +1,14 @@
+trix-editor {
+  direction: rtl;
+  text-align: right;
+  & pre {
+    direction: ltr;
+    text-align: left;
+    margin: 0;
+    padding: .5em .5em .5em .625em;
+    background-color: rgba(102,102,102,0.09);
+    border: 1px solid rgba(102,102,102,0.3);
+    overflow: auto;
+    font-size: 0.9em;
+  }
+}
